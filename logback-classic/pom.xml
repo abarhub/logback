@@ -11,7 +11,7 @@
     <version>1.2.6-SNAPSHOT</version>
   </parent>
 
-  <artifactId>logback-classic</artifactId>
+  <artifactId>logback-classic-ogmios</artifactId>
   <packaging>jar</packaging>
   <name>Logback Classic Module</name>
   <description>logback-classic module</description>
