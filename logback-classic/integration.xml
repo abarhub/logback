@@ -28,13 +28,13 @@
 
 
 	<target name="testWithoutGroovy" unless="maven.test.skip">
-		<junit printsummary="yes" fork="no" haltonfailure="yes">
-			<classpath refid="basicClasspath" />
-			<formatter type="plain" />
-			<test fork="yes" todir="target/unit-reports" 
-            outfile="TEST-NoGroovy" 
-            name="ch.qos.logback.classic.util.InitializationIntegrationTest" />
-		</junit>
+<!--		<junit printsummary="yes" fork="no" haltonfailure="yes">-->
+<!--			<classpath refid="basicClasspath" />-->
+<!--			<formatter type="plain" />-->
+<!--			<test fork="yes" todir="target/unit-reports" -->
+<!--            outfile="TEST-NoGroovy" -->
+<!--            name="ch.qos.logback.classic.util.InitializationIntegrationTest" />-->
+<!--		</junit>-->
 	</target>
 
 	<target name="testConditionalsWithoutJanino" unless="maven.test.skip">

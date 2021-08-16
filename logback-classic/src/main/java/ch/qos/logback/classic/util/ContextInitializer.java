@@ -33,6 +33,10 @@ import ch.qos.logback.core.status.WarnStatus;
 import ch.qos.logback.core.util.Loader;
 import ch.qos.logback.core.util.OptionHelper;
 import ch.qos.logback.core.util.StatusListenerConfigHelper;
+import org.ogmios.api.OgmiosConfiguration;
+import org.ogmios.api.config.Configuration;
+import org.ogmios.api.exception.ConfigurationException;
+
 
 // contributors
 // Ted Graham, Matt Fowles, see also http://jira.qos.ch/browse/LBCORE-32
@@ -144,6 +148,16 @@ public class ContextInitializer {
     }
 
     public void autoConfig() throws JoranException {
+        // methode à modifier
+        try {
+            System.out.println("hello from logback");
+            Configuration configuration = OgmiosConfiguration.getConfiguration("logback");
+            if(configuration!=null){
+                System.out.println("config logback ok");
+            }
+        } catch (ConfigurationException e) {
+            e.printStackTrace();
+        }
         StatusListenerConfigHelper.installIfAsked(loggerContext);
         URL url = findURLOfDefaultConfigurationFile(true);
         if (url != null) {

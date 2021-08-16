@@ -100,12 +100,12 @@
         fork="yes" dir="${basedir}" -->
 
 	<target name="logback" unless="maven.test.skip">
-    <prepareOSGiHarness binding="logback"/>
-    <junit printsummary="yes" fork="yes" dir="${basedir}" haltonfailure="yes">    
-      <classpath refid="basicCP"/>
-      <formatter type="plain" />
-      <test fork="yes" todir="target/unit-reports" name="org.slf4j.test_osgi.BundleTest" />
-    </junit>
+<!--    <prepareOSGiHarness binding="logback"/>-->
+<!--    <junit printsummary="yes" fork="yes" dir="${basedir}" haltonfailure="yes">-->
+<!--      <classpath refid="basicCP"/>-->
+<!--      <formatter type="plain" />-->
+<!--      <test fork="yes" todir="target/unit-reports" name="org.slf4j.test_osgi.BundleTest" />-->
+<!--    </junit>-->
 	</target>
   
 </project>
